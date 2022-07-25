@@ -24,5 +24,4 @@ const checkWinner = (avgDolphins, avgKoalas) => {
         console.log("No team wins.");
     }
 };
-calcAverage(44, 23, 71);
-calcAverage(65, 74, 49);
+checkWinner(scoreDolphins, scoreKoalas);
