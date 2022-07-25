@@ -58,3 +58,28 @@ calcTotal(125);
 calcTotal(555);
 calcTotal(44);
 console.log(tips, total);
+// Coding Challenge 3: Objects
+const jSmith = {
+    name: "John Smith",
+    mass: 92,
+    height: 1.95,
+    BMI: 0
+};
+const mMiller = {
+    name: "Mark Miller",
+    mass: 78,
+    height: 1.69,
+    BMI: 0
+};
+const calcBMI = (mass, height) => {
+    console.log(mass / Math.pow(height, 2));
+    return mass / Math.pow(height, 2);
+};
+jSmith.BMI = calcBMI(jSmith.mass, jSmith.height);
+mMiller.BMI = calcBMI(mMiller.mass, mMiller.height);
+if (jSmith.BMI > mMiller.BMI) {
+    console.log(`John's BMI (${jSmith.BMI}) is higher than Mark's (${mMiller.BMI}.)`);
+}
+else if (mMiller.BMI > jSmith.BMI) {
+    console.log(`Mark's BMI (${mMiller.BMI}) is higher than John's (${jSmith.BMI}.)`);
+}
