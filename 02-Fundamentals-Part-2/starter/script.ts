@@ -38,10 +38,29 @@ checkWinner(scoreDolphins, scoreKoalas);
 const friends: string[] = ["Michael", "Steven", "Peter"];
 
 // Coding Challenge 2: Arrays
+const bills: number[] = [125, 555, 44];
+const tips: number[] = [];
+const total: number[] = [];
 const calcTip = (bill: number) => {
   if (bill <= 300 && bill >= 50) {
-    bill * 0.15;
+    tips.push(bill * 0.15);
   } else {
-    bill * 0.2;
+    tips.push(bill * 0.2);
   }
 };
+
+const calcTotal = (bill: number) => {
+  if (bill <= 300 && bill >= 50) {
+    total.push(bill * 1.15);
+  } else {
+    total.push(bill * 1.2);
+  }
+};
+
+calcTip(125);
+calcTip(555);
+calcTip(44);
+calcTotal(125);
+calcTotal(555);
+calcTotal(44);
+console.log(tips, total);
