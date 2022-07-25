@@ -10,8 +10,12 @@ const calcAverage = (score1, score2, score3) => {
     return (score1 + score2 + score3) / 3;
 };
 //Test 1
-const scoreDolphins = calcAverage(44, 23, 71);
-const scoreKoalas = calcAverage(65, 54, 49);
+// const scoreDolphins = calcAverage(44, 23, 71);
+// const scoreKoalas = calcAverage(65, 54, 49);
+// console.log(scoreDolphins, scoreKoalas);
+//Test 2
+const scoreDolphins = calcAverage(85, 54, 41);
+const scoreKoalas = calcAverage(23, 34, 27);
 console.log(scoreDolphins, scoreKoalas);
 const checkWinner = (avgDolphins, avgKoalas) => {
     if (avgDolphins >= 2 * avgKoalas) {
@@ -25,3 +29,14 @@ const checkWinner = (avgDolphins, avgKoalas) => {
     }
 };
 checkWinner(scoreDolphins, scoreKoalas);
+//Array Practice
+const friends = ["Michael", "Steven", "Peter"];
+// Coding Challenge 2: Arrays
+const calcTip = (bill) => {
+    if (bill <= 300 && bill >= 50) {
+        bill * 0.15;
+    }
+    else {
+        bill * 0.2;
+    }
+};
