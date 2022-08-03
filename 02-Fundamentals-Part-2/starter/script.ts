@@ -108,4 +108,5 @@ let bills = [22, 295, 176, 44, 37, 105, 10, 1100, 86, 52];
 
 for (let i = 0; i < bills.length; i++) {
   tips.push(calcTip(i));
+  total.push(calcTotal(i));
 }
