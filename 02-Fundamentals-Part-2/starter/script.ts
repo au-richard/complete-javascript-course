@@ -38,10 +38,10 @@ checkWinner(scoreDolphins, scoreKoalas);
 const friends: string[] = ["Michael", "Steven", "Peter"];
 
 // Coding Challenge 2: Arrays
-const bills: number[] = [125, 555, 44];
+const check: number[] = [125, 555, 44];
 const tips: number[] = [];
 const total: number[] = [];
-const calcTip = (bill: number) => {
+const calcTip = (bill: number | number[]): void => {
   if (bill <= 300 && bill >= 50) {
     tips.push(bill * 0.15);
   } else {
@@ -49,7 +49,7 @@ const calcTip = (bill: number) => {
   }
 };
 
-const calcTotal = (bill: number) => {
+const calcTotal = (bill: any) => {
   if (bill <= 300 && bill >= 50) {
     total.push(bill * 1.15);
   } else {
@@ -100,4 +100,12 @@ if (jSmith.BMI > mMiller.BMI) {
   console.log(`John's BMI (${jSmith.BMI}) is higher than Mark's (${mMiller.BMI}.)`);
 } else if (mMiller.BMI > jSmith.BMI) {
   console.log(`Mark's BMI (${mMiller.BMI}) is higher than John's (${jSmith.BMI}.)`);
+}
+
+
+//Coding Challenge 4: Loops
+let bills = [22, 295, 176, 44, 37, 105, 10, 1100, 86, 52];
+
+for (let i = 0; i < bills.length; i++) {
+  tips.push(calcTip(i));
 }
